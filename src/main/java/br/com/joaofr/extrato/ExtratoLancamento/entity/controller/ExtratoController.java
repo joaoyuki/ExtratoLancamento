@@ -5,11 +5,13 @@
  */
 package br.com.joaofr.extrato.ExtratoLancamento.entity.controller;
 
+import br.com.joaofr.extrato.ExtratoLancamento.DTO.ExtratoFormatadoDTO;
 import br.com.joaofr.extrato.ExtratoLancamento.entity.ExtratoLancamento;
 import br.com.joaofr.extrato.ExtratoLancamento.service.ExtratoService;
 import br.com.joaofr.extrato.ExtratoLancamento.utils.JsonUtils;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import java.util.List;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -39,5 +41,15 @@ public class ExtratoController {
         
         return ResponseEntity.ok(extrato);
     }
+    
+    @GetMapping("/formatado")
+    @ApiOperation(value = "Retorna dados formatados de arquivo", response = ExtratoLancamento[].class)
+    public ResponseEntity recupeDadosFormatados(){
+        
+        ExtratoLancamento extrato = extratoService.retornaExtrato();
+        List<ExtratoFormatadoDTO> extratoFormatado = extratoService.retornaExtratoFormatado(extrato);
+        
+        return ResponseEntity.ok(extratoFormatado);
+    }    
     
 }

@@ -26,7 +26,7 @@ public class ControleLancamento {
     private String dataEfetivaLancamento;
     private Integer numeroEvento;
     private String nomeBanco;
-    private LancamentoContaCorrente lancamentoContaCorrente;
+    private LancamentoContaCorrenteCliente lancamentoContaCorrenteCliente;
     private String descricaoGrupoPagamento;
     private Integer codigoIdentificadorUnico;
     private Long dateEfetivaLancamento;
@@ -110,12 +110,12 @@ public class ControleLancamento {
         this.nomeBanco = nomeBanco;
     }
 
-    public LancamentoContaCorrente getLancamentoContaCorrente() {
-        return lancamentoContaCorrente;
+    public LancamentoContaCorrenteCliente getLancamentoContaCorrente() {
+        return lancamentoContaCorrenteCliente;
     }
 
-    public void setLancamentoContaCorrente(LancamentoContaCorrente lancamentoContaCorrente) {
-        this.lancamentoContaCorrente = lancamentoContaCorrente;
+    public void setLancamentoContaCorrente(LancamentoContaCorrenteCliente lancamentoContaCorrente) {
+        this.lancamentoContaCorrenteCliente = lancamentoContaCorrente;
     }
 
     public String getDescricaoGrupoPagamento() {
