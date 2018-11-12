@@ -57,7 +57,7 @@ public class ExtratoService {
             extrato.setDataLancamento(lancamento.getDataLancamentoContaCorrenteCliente());
             extrato.setDescricao(lancamento.getLancamentoContaCorrente().getNomeTipoOperacao());
             extrato.setSituacao(lancamento.getLancamentoContaCorrente().getNomeSituacaoRemessa());
-            extrato.setNumero(lancamento.getLancamentoContaCorrente().getNumeroRemessaBanco().intValue());
+            extrato.setNumero(lancamento.getLancamentoContaCorrente().getNumeroRemessaBanco());
             extrato.setDataConfirmacao(lancamento.getDataEfetivaLancamento());
             extrato.setValorFinal("R$ " + recuperaValorBigDecimal(lancamento.getValorLancamentoRemessa()));
             extratosFormatados.add(extrato);

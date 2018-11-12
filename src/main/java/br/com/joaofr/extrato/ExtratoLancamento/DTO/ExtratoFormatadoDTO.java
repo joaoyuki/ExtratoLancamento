@@ -15,13 +15,13 @@ public class ExtratoFormatadoDTO {
     
     private String dataLancamento;
     private String descricao;
-    private Integer numero;
+    private Long numero;
     private String situacao;
     private String dataConfirmacao;
     private String dadosBancarios;
     private String valorFinal;
 
-    public ExtratoFormatadoDTO(String dataLancamento, String descricao, Integer numero, String situacao, String dataConfirmacao, String dadosBancarios, String valorFinal) {
+    public ExtratoFormatadoDTO(String dataLancamento, String descricao, Long numero, String situacao, String dataConfirmacao, String dadosBancarios, String valorFinal) {
         this.dataLancamento = dataLancamento;
         this.descricao = descricao;
         this.numero = numero;
@@ -51,11 +51,11 @@ public class ExtratoFormatadoDTO {
         this.descricao = descricao;
     }
 
-    public Integer getNumero() {
+    public Long getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(Long numero) {
         this.numero = numero;
     }
 
